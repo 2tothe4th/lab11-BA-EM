@@ -3,14 +3,15 @@ from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(0, 0), 0)
 
     def test_subtract(self):
         self.assertEqual(sub(10, 4), 6)
-
-    self.assertEqual(sub(0, 5), -5)
-    self.assertEqual(sub(7, 7), 0)
+        self.assertEqual(sub(0, 5), -5)
+        self.assertEqual(sub(7, 7), 0)
 
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
@@ -28,8 +29,8 @@ class TestCalculator(unittest.TestCase):
     def test_logarithm(self):
         self.assertAlmostEqual(log(10, 100), 2.0)
 
-    self.assertAlmostEqual(log(2, 8), 3.0)
-    self.assertAlmostEqual(log(2, 1), 0.0)
+        self.assertAlmostEqual(log(2, 8), 3.0)
+        self.assertAlmostEqual(log(2, 1), 0.0)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
