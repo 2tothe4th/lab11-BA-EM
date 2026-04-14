@@ -1,3 +1,4 @@
+# https://github.com/2tothe4th/lab11-BA-EM
 import unittest
 from calculator import *
 
@@ -20,8 +21,8 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(mul(12, 12), 144)
     def test_divide(self): # 3 assertions
         self.assertAlmostEqual(div(3, 12), 4)
-        self.assertAlmostEqual(mul(2, 1), 0.5)
-        self.assertAlmostEqual(mul(5, 5), 1)
+        self.assertAlmostEqual(div(2, 1), 0.5)
+        self.assertAlmostEqual(div(5, 5), 1)
     # ##########################
 
     ######## Partner 2
@@ -59,6 +60,10 @@ class TestCalculator(unittest.TestCase):
         # Test basic function
         with self.assertRaises(ValueError):
             square_root(-1)
+        with self.assertRaises(ValueError):
+            square_root(-2)
+        with self.assertRaises(ValueError):
+            square_root(-3)
     ##########################
 
 # Do not touch this
